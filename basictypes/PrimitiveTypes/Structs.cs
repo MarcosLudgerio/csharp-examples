@@ -40,7 +40,6 @@ class ConditionalInstrutions
         }
     }
 }
-
 class RepeatitonsInstructinos
 {
     void LoopWilhe()
