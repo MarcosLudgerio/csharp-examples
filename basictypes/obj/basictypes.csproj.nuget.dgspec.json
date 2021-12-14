@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\BasicTypes\\basictypes.csproj": {}
+    "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\basictypes\\basictypes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\BasicTypes\\basictypes.csproj": {
+    "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\basictypes\\basictypes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\BasicTypes\\basictypes.csproj",
+        "projectUniqueName": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\basictypes\\basictypes.csproj",
         "projectName": "basictypes",
-        "projectPath": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\BasicTypes\\basictypes.csproj",
+        "projectPath": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\basictypes\\basictypes.csproj",
         "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\BasicTypes\\obj\\",
+        "outputPath": "C:\\Users\\marco\\Documents\\www\\dotnet-study\\projects\\csharpi-examples\\basictypes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"

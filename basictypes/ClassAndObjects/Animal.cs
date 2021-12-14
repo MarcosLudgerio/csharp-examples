@@ -1,0 +1,34 @@
+// ClasseA : ClasseB == ClasseA extends ClasseB
+namespace ClassAndObjects;
+
+public class Animal
+{
+    public string name;
+    protected string classification;
+    protected string filo;
+    protected string cientificName;
+
+    public Animal(string name, string classification, string filo, string cientificName)
+    {
+        this.name = name;
+        this.classification = classification;
+        this.filo = filo;
+        this.cientificName = cientificName;
+    }
+
+    public virtual void toMove()
+    {
+        Console.WriteLine("The animal is moving");
+    }
+
+    public virtual void toEat()
+    {
+        Console.WriteLine("the animal is eating");
+    }
+
+    public virtual void toSleep()
+    {
+        Console.WriteLine("the animal is sleeping");
+    }
+
+}
