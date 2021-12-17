@@ -1,29 +1,30 @@
-namespace ClassAndObjects;
-public class Fish : Animal
+namespace ClassAndObjects
 {
 
-    private string habbitat;
-    private string region;
-    private string country;
-    public Fish(string habbitat, string region, string country) : base("", "", "", "")
+    public class Fish : Animal
     {
-        this.habbitat = habbitat;
-        this.region = region;
-        this.country = country;
-    }
-    public override void toMove()
-    {
-        Console.WriteLine("The fish is moving in the ocean with its fins.");
-    }
 
-    public override void toEat()
-    {
-        Console.WriteLine("the fish is eating seaweed in the sea ");
-    }
+        private string region;
+        private string country;
+        public Fish(string name, string region, string country) : base(name, "", "", "")
+        {
+            this.region = region;
+            this.country = country;
+        }
+        public override void toMove()
+        {
+            Console.WriteLine(this.name + " is moving");
+        }
 
-    public override void toSleep()
-    {
-        Console.WriteLine("Fish never sleep!");
-    }
+        public override void toEat()
+        {
+            Console.WriteLine(this.name + " is eating");
+        }
 
+        public override void toSleep()
+        {
+            Console.WriteLine(this.name + " never sleep");
+        }
+
+    }
 }

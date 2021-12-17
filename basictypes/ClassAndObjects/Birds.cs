@@ -1,29 +1,29 @@
-namespace ClassAndObjects;
-
-public class Birds : Animal
+namespace ClassAndObjects
 {
-    private string habbitat;
-    private string region;
-    private string country;
-    public Birds(string habbitat, string region, string country) : base("", "", "", "")
+    public class Birds : Animal
     {
-        this.habbitat = habbitat;
-        this.region = region;
-        this.country = country;
-    }
+        private string region;
+        private string country;
+        public Birds(string name, string region, string country) : base(name, "", "", "")
+        {
+            this.region = region;
+            this.country = country;
+        }
 
-    public override void toMove()
-    {
-        Console.WriteLine("The Bird is moving with your wings");
-    }
+        public override void toMove()
+        {
+            Console.WriteLine(base.name + " is moving");
+        }
 
-    public override void toEat()
-    {
-        Console.WriteLine("The Bird is eating with your beak");
-    }
+        public override void toEat()
+        {
+            Console.WriteLine(this.name + " is eating");
+        }
 
-    public override void toSleep()
-    {
-        Console.WriteLine("The Bird is sleeping at the tree.");
+        public override void toSleep()
+        {
+            Console.WriteLine(this.name + " is sleeping");
+        }
     }
 }
+
