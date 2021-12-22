@@ -18,9 +18,10 @@
                         Console.Write("Informe o nome do aluno: ");
                         student.Name = Console.ReadLine();
                         Console.Write("Informe a note do aluno: ");
-                        if (decimal.TryParse(Console.ReadLine(), out decimal nota))
+                        if (decimal.TryParse(Console.ReadLine(), out decimal noteInput))
                         {
-                            student.Note = nota;
+                            if (!(noteInput >= 0 && noteInput <= 10)) break;
+                            student.Note = noteInput;
                             Console.WriteLine("Aluno cadastrado com sucesso!");
                             if (controll > 4) break;
                             students[controll] = student;
