@@ -1,0 +1,15 @@
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.csproj.AssemblyReference.cache
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.AssemblyInfoInputs.cache
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.AssemblyInfo.cs
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\applicationNots.exe
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\applicationNots.deps.json
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\applicationNots.runtimeconfig.json
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\applicationNots.dll
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\ref\applicationNots.dll
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\bin\Debug\net6.0\applicationNots.pdb
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.dll
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\ref\applicationNots.dll
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.pdb
+C:\Users\marco\Documents\www\dotnet-study\projects\csharpi-examples\applicationNots\obj\Debug\net6.0\applicationNots.genruntimeconfig.cache
