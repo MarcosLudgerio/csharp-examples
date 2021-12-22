@@ -33,7 +33,8 @@
                     case "2":
                         foreach (var s in students)
                         {
-                            Console.WriteLine($"ALUNO: {s.Name} - NOTA: {s.Note}");
+                            if (!string.IsNullOrEmpty(s.Name))
+                                Console.WriteLine($"ALUNO: {s.Name} - NOTA: {s.Note}");
                         }
                         break;
 
