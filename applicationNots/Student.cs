@@ -4,6 +4,12 @@ namespace ApplicationNots
     {
         public string Name { get; set; }
         public decimal Note { get; set; }
+
+        string ToString()
+        {
+            return Name;
+        }
+
     }
 
 }

@@ -6,6 +6,7 @@
         {
             string[] options = new string[4] { "1", "2", "3", "X" };
             Student[] students = new Student[5];
+            int controll = 0;
             string option = ShowOptions();
             while (option.ToUpper() != "X")
             {
@@ -17,13 +18,23 @@
                         Console.Write("Informe o nome do aluno: ");
                         student.Name = Console.ReadLine();
                         Console.Write("Informe a note do aluno: ");
-                        student.Note = Decimal.Parse(Console.ReadLine());
-                        Console.WriteLine();
+                        if (decimal.TryParse(Console.ReadLine(), out decimal nota))
+                        {
+                            student.Note = nota;
+                            Console.WriteLine("Aluno cadastrado com sucesso!");
+                            if (controll > 4) break;
+                            students[controll] = student;
+                            controll++;
+                        }
+                        else
+                            Console.WriteLine("Nota inválida, tende novamente!");
                         break;
 
                     case "2":
-                        //TODO: list student
-                        Console.WriteLine("Esclheu a primeira opção");
+                        foreach (var s in students)
+                        {
+                            Console.WriteLine($"ALUNO: {s.Name} - NOTA: {s.Note}");
+                        }
                         break;
 
                     case "3":
@@ -39,6 +50,7 @@
             }
             string ShowOptions()
             {
+                Console.WriteLine();
                 Console.WriteLine("Informe a opção desejada:");
                 Console.WriteLine("1 - Cadastrar novo aluno");
                 Console.WriteLine("2 - Listar alunos");
