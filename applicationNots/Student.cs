@@ -5,7 +5,7 @@ namespace ApplicationNots
         public string Name { get; set; }
         public decimal Note { get; set; }
 
-        string ToString()
+        override public string ToString()
         {
             return Name;
         }

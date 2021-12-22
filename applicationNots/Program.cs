@@ -39,8 +39,32 @@
                         break;
 
                     case "3":
-                        //TODO: avg
-                        Console.WriteLine("Esclheu a primeira opção");
+                        decimal sumNotes = 0;
+                        int contStudents = 0;
+                        for (int i = 0; i < students.Length; i++)
+                        {
+                            if (!string.IsNullOrEmpty(students[i].Name))
+                            {
+                                sumNotes = sumNotes + students[i].Note;
+                                contStudents++;
+                            }
+                        }
+                        var avgStudents = sumNotes / contStudents;
+
+                        Classification classGeneral;
+
+                        if (avgStudents < 3)
+                            classGeneral = Classification.E;
+                        else if (avgStudents <= 5)
+                            classGeneral = Classification.D;
+                        else if (avgStudents <= 7)
+                            classGeneral = Classification.C;
+                        else if (avgStudents <= 9)
+                            classGeneral = Classification.B;
+                        else
+                            classGeneral = Classification.A;
+
+                        Console.WriteLine($"MÉDIA GERAL: {avgStudents} a turma está classificada como CLASSE {classGeneral}");
                         break;
 
                     default:
