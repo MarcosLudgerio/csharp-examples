@@ -2,10 +2,10 @@
 {
     public class Application
     {
+        static Student[] students = new Student[5];
         public static void Main(string[] args)
         {
             string[] options = new string[4] { "1", "2", "3", "X" };
-            Student[] students = new Student[5];
             int controll = 0;
             string option = ShowOptions();
             while (option.ToUpper() != "X")
@@ -17,18 +17,18 @@
                         Console.WriteLine("Adicionar novo aluno");
                         Console.Write("Informe o nome do aluno: ");
                         student.Name = Console.ReadLine();
-                        Console.Write("Informe a note do aluno: ");
+                        Console.Write("Informe a nota do aluno: ");
                         if (decimal.TryParse(Console.ReadLine(), out decimal noteInput))
                         {
                             if (!(noteInput >= 0 && noteInput <= 10)) break;
                             student.Note = noteInput;
                             Console.WriteLine("Aluno cadastrado com sucesso!");
-                            if (controll > 4) break;
+                            if (controll >= 4) break;
                             students[controll] = student;
                             controll++;
                         }
                         else
-                            Console.WriteLine("Nota inválida, tende novamente!");
+                            Console.WriteLine("Nota inválida, tente novamente!");
                         break;
 
                     case "2":
@@ -40,6 +40,19 @@
                         break;
 
                     case "3":
+                        Console.WriteLine("Apagar Aluno");
+                        Console.Write("Informe o nome do aluno: ");
+                        String name = Console.ReadLine();
+                        int studentFinded = getStudentByName(name);
+                        Console.WriteLine(students[studentFinded].Name);
+                        students[studentFinded] = new Student();
+                        Console.WriteLine(students[studentFinded].Name);
+                        controll--;
+                        Console.WriteLine(controll);
+                        // if (students[controll].Name != null)
+                        break;
+
+                    case "4":
                         decimal sumNotes = 0;
                         int contStudents = 0;
                         for (int i = 0; i < students.Length; i++)
@@ -69,23 +82,34 @@
                         break;
 
                     default:
-                        Console.WriteLine($"Opcão {option} é inválida, tente novamente");
+                        Console.WriteLine($"Opcão {option} é inválida, tente novamente!");
                         break;
                 }
                 option = ShowOptions();
             }
-            string ShowOptions()
-            {
-                Console.WriteLine();
-                Console.WriteLine("Informe a opção desejada:");
-                Console.WriteLine("1 - Cadastrar novo aluno");
-                Console.WriteLine("2 - Listar alunos");
-                Console.WriteLine("3 - Calcular média geral");
-                Console.WriteLine("X - Parar a aplicação");
-                string option = Console.ReadLine();
-                Console.WriteLine();
-                return option;
-            }
+
+        }
+        static string ShowOptions()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Informe a opção desejada:");
+            Console.WriteLine("1 - Cadastrar novo aluno");
+            Console.WriteLine("2 - Listar alunos");
+            Console.WriteLine("3 - Excluir aluno");
+            Console.WriteLine("4 - Calcular média geral");
+            Console.WriteLine("X - Parar a aplicação");
+            string option = Console.ReadLine();
+            Console.WriteLine();
+            return option;
+        }
+        static int getStudentByName(String name)
+        {
+            int studentIndex = -1;
+            foreach (var s in students)
+                if (!string.IsNullOrEmpty(s.Name))
+                    if (s.Name.ToLower().Equals(name.ToLower()))
+                        studentIndex = Array.IndexOf(students, s);
+            return studentIndex;
         }
     }
 }
