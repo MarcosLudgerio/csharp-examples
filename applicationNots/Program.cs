@@ -41,44 +41,17 @@
 
                     case "3":
                         Console.WriteLine("Apagar Aluno");
+                        if (controll == 0) break;
                         Console.Write("Informe o nome do aluno: ");
                         String name = Console.ReadLine();
-                        int studentFinded = getStudentByName(name);
-                        Console.WriteLine(students[studentFinded].Name);
+                        int studentFinded = getIndexStudentByName(name);
                         students[studentFinded] = new Student();
-                        Console.WriteLine(students[studentFinded].Name);
                         controll--;
-                        Console.WriteLine(controll);
-                        // if (students[controll].Name != null)
                         break;
 
                     case "4":
-                        decimal sumNotes = 0;
-                        int contStudents = 0;
-                        for (int i = 0; i < students.Length; i++)
-                        {
-                            if (!string.IsNullOrEmpty(students[i].Name))
-                            {
-                                sumNotes = sumNotes + students[i].Note;
-                                contStudents++;
-                            }
-                        }
-                        var avgStudents = sumNotes / contStudents;
-
-                        Classification classGeneral;
-
-                        if (avgStudents < 3)
-                            classGeneral = Classification.E;
-                        else if (avgStudents <= 5)
-                            classGeneral = Classification.D;
-                        else if (avgStudents <= 7)
-                            classGeneral = Classification.C;
-                        else if (avgStudents <= 9)
-                            classGeneral = Classification.B;
-                        else
-                            classGeneral = Classification.A;
-
-                        Console.WriteLine($"MÉDIA GERAL: {avgStudents} a turma está classificada como CLASSE {classGeneral}");
+                        if (controll == 0) break;
+                        Console.WriteLine($"MÉDIA GERAL: {CalcAvg()} a turma está classificada como CLASSE {GetClassification(CalcAvg())}");
                         break;
 
                     default:
@@ -102,7 +75,7 @@
             Console.WriteLine();
             return option;
         }
-        static int getStudentByName(String name)
+        static int getIndexStudentByName(String name)
         {
             int studentIndex = -1;
             foreach (var s in students)
@@ -111,5 +84,39 @@
                         studentIndex = Array.IndexOf(students, s);
             return studentIndex;
         }
+
+        static Classification GetClassification(decimal avgStudents)
+        {
+            Classification classGeneral;
+
+            if (avgStudents < 3)
+                classGeneral = Classification.E;
+            else if (avgStudents <= 5)
+                classGeneral = Classification.D;
+            else if (avgStudents <= 7)
+                classGeneral = Classification.C;
+            else if (avgStudents <= 9)
+                classGeneral = Classification.B;
+            else
+                classGeneral = Classification.A;
+            return classGeneral;
+        }
+
+        static decimal CalcAvg()
+        {
+            decimal sumNotes = 0;
+            int contStudents = 0;
+            for (int i = 0; i < students.Length; i++)
+            {
+                if (!string.IsNullOrEmpty(students[i].Name))
+                {
+                    sumNotes = sumNotes + students[i].Note;
+                    contStudents++;
+                }
+            }
+            return sumNotes / contStudents;
+        }
+
+
     }
 }
