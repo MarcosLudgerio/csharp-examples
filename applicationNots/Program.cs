@@ -5,7 +5,6 @@
         static Student[] students = new Student[5];
         public static void Main(string[] args)
         {
-            string[] options = new string[4] { "1", "2", "3", "X" };
             int controll = 0;
             string option = ShowOptions();
             while (option.ToUpper() != "X")
@@ -22,8 +21,8 @@
                         {
                             if (!(noteInput >= 0 && noteInput <= 10)) break;
                             student.Note = noteInput;
-                            Console.WriteLine("Aluno cadastrado com sucesso!");
                             if (controll >= 4) break;
+                            Console.WriteLine("Aluno cadastrado com sucesso!");
                             students[controll] = student;
                             controll++;
                         }
@@ -44,14 +43,14 @@
                         if (controll == 0) break;
                         Console.Write("Informe o nome do aluno: ");
                         String name = Console.ReadLine();
-                        int studentFinded = getIndexStudentByName(name);
-                        students[studentFinded] = new Student();
+                        int indexStudentFinded = GetIndexStudentByName(name);
+                        students[indexStudentFinded] = new Student();
                         controll--;
                         break;
 
                     case "4":
                         if (controll == 0) break;
-                        Console.WriteLine($"MÉDIA GERAL: {CalcAvg()} a turma está classificada como CLASSE {GetClassification(CalcAvg())}");
+                        Console.WriteLine($"MÉDIA GERAL: {CalcAvg()}, a turma está classificada como CLASSE {GetClassification(CalcAvg())}");
                         break;
 
                     default:
@@ -75,7 +74,7 @@
             Console.WriteLine();
             return option;
         }
-        static int getIndexStudentByName(String name)
+        static int GetIndexStudentByName(String name)
         {
             int studentIndex = -1;
             foreach (var s in students)
